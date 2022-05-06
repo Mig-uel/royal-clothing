@@ -1,6 +1,3 @@
-// Styles
-import './categories.styles.scss';
-
 // Components
 import Directory from './components/directory/directory.component'
 
