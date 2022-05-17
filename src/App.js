@@ -1,3 +1,4 @@
+// import chalk from 'chalk';
 import { Routes, Route } from 'react-router-dom';
 
 // Components
@@ -18,7 +19,6 @@ const App = () => {
         <Route path='sign-in' element={<SignIn />} exact />
       </Route>
     </Routes>
-
   );
 }
 
