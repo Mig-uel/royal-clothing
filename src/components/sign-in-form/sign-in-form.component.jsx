@@ -1,4 +1,7 @@
+// React Methods
 import { useState } from 'react';
+
+// Firebase Methods
 import { createUserDocumentFromAuth, signInWithGooglePopup, signInAuthUserWithEmalAndPassword } from '../../utils/firebase/firebase.utils';
 
 // Components
@@ -18,15 +21,12 @@ const SignInForm = () => {
   const [formFields, setFormFields] = useState(defaultFormFields);
   const { email, password } = formFields;
 
-  console.log(formFields);
-
   const resetFormFields = () => {
     setFormFields(defaultFormFields)
   }
 
   const signInWithGoogle = async () => {
-    const { user } = await signInWithGooglePopup();
-    await createUserDocumentFromAuth(user);
+    await signInWithGooglePopup();
   }
 
   // handleSubmit function
@@ -34,8 +34,7 @@ const SignInForm = () => {
     e.preventDefault();
 
     try {
-      const res = await signInAuthUserWithEmalAndPassword(email, password)
-      console.log(res);
+      const { user } = await signInAuthUserWithEmalAndPassword(email, password)
 
       resetFormFields();
     } catch (err) {
