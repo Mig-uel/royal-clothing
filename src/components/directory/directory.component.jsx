@@ -1,5 +1,5 @@
 // Components
-import CategoryItem from "../category-item/category-item.component";
+import CategoryItem from "../directory-item/directory-item.component";
 
 // JSON
 import categories from '../../categories.json'
