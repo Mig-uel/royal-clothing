@@ -30,7 +30,7 @@ const firebaseConfig = {
   appId: "1:283550416346:web:93ca16f70b588ecaf854e3"
 };
 
-const firebaseApp = initializeApp(firebaseConfig);
+const firebaseApp = () => initializeApp(firebaseConfig);
 
 const googleProvider = new GoogleAuthProvider();
 
@@ -53,7 +53,6 @@ export const addCollectionAndDocuments = async (collectionKey, objectsToAdd) => 
   })
 
   await batch.commit();
-  console.log('done');
 }
 
 export const getCategoriesAndDocuments = async () => {

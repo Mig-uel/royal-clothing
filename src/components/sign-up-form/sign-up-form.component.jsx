@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { createUserDocumentFromAuth, createAuthUserWithEmalAndPassword } from '../../utils/firebase/firebase.utils';
+import { createUserDocumentFromAuth, createAuthUserWithEmalAndPassword } from '../../utils/firebase.utils';
 
 // Components
 import FormInput from '../form-input/form-input.component';
@@ -35,7 +35,6 @@ const SignUpForm = () => {
 
     try {
       const { user } = await createAuthUserWithEmalAndPassword(email, password);
-      console.log(user);
 
       await createUserDocumentFromAuth(user, { displayName });
 
