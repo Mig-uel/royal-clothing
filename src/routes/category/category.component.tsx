@@ -9,7 +9,7 @@ import selectCategoriesMap, {
 import ProductCard from '../../components/product-card/product-card.component'
 import Spinner from '../../components/spinner/spinner.component'
 
-import './category.styles.scss'
+import './category.styles'
 import { CategoryContainer, Title } from './category.styles'
 
 type CategoryRouteParams = {
