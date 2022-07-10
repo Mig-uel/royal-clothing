@@ -2,6 +2,9 @@ import { useEffect, lazy, Suspense } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 
+// Styles
+import { GlobalStyle } from './global.styles'
+
 // Components
 import Spinner from './components/spinner/spinner.component'
 import { checkUserSession } from './store/user/user.action'
@@ -23,6 +26,7 @@ const App = () => {
 
   return (
     <Suspense fallback={<Spinner />}>
+      <GlobalStyle />
       <Routes>
         <Route exact path='/' element={<Navigation />}>
           <Route index element={<Home />} exact />
