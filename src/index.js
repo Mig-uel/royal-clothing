@@ -4,6 +4,7 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import { PersistGate } from 'redux-persist/integration/react'
 import { Elements } from '@stripe/react-stripe-js'
+// import * as serviceWorker from './serviceWorker'
 
 // Components
 import App from './App'
@@ -24,3 +25,5 @@ root.render(
     </Provider>
   </React.StrictMode>
 )
+
+// serviceWorker.register()
